@@ -1,0 +1,71 @@
+html,
+body {
+  min-height: 100%;
+  margin: 0;
+}
+
+/* From Uiverse.io by kencode7 */
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(
+      to bottom,
+      #fff 0%,
+      #fff 40%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    linear-gradient(to right, #0ed2da, #5f29c7);
+  position: relative;
+  overflow: hidden;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(90deg, #ccc 1px, transparent 1px);
+  background-size: 50px 100%;
+  pointer-events: none;
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 70%
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 70%
+  );
+}
+
+
+/* From Uiverse.io by arthur_6104 */ 
+.box-button {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  z-index: 1;
+  cursor: pointer;
+  border: 4px solid black;
+  background-color: gray;
+  padding-bottom: 10px;
+  transition: 0.1s ease-in-out;
+  user-select: none;
+}
+
+.button {
+  background-color: #dddddd;
+  border: 4px solid #fff;
+  padding: 3px 8px;
+}
+
+.button span {
+  font-size: 1.2em;
+  letter-spacing: 1px;
+}
+
+.box-button:active {
+  padding: 0;
+  margin-bottom: 10px;
+  transform: translateY(10px);
+}
